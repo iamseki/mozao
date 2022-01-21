@@ -14,58 +14,55 @@ interface ImageMetadata {
   driveId: string
   title: string
   message: string
+  textColor?: string
 }
 
 const images: ImageMetadata[] = [
   {
     driveId: "11gmLZG42vC9LSJzBmFsaB3iJRvPZsjQv",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Amorzão",
+    message: "Parabéns, você merece o mundo mas vai ter que se contentar com esse site :D"
   },
   {
     driveId: "1t06CCXTGYCG9tON0bdS4W3DmClKGy9aM",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Obrigado",
+    message: "Por ser a melhor mamãe do mundo!"
   },
   {
     driveId: "1cqlHY9OT-QEGzLnSwovBbZLqynx__WJB",
-    title: "Titulo",
-    message: "blablablable"
-  },
-  {
-    driveId: "1EppwVFUaP3PECsissS39K7aEZarV9CnX",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Você",
+    message: "É a melhor namorada do mundo."
   },
   {
     driveId: "1QDZzO7UHNoxhsw0LLBXDqlbb97nS6EVg",
-    title: "Titulo",
-    message: "blablablable"
+    title: "É",
+    message: "A melhor noiva também."
   },
   {
     driveId: "1QJ1-1u3ZvGfx9JEGxrUGBM8i6Egku8k8",
-    title: "Titulo",
-    message: "blablablable"
+    title: "A",
+    message: "Pessoa mais maravilinda."
   },
   {
     driveId: "1Nw4dNCqdCeYs8CAAHhQ2gV2HqDzHSCP1",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Razão",
+    message: "Da nossa alegria."
   },
   {
     driveId: "1v-rShy5_3e5qrHTnFyHlS1NCMABfd4qr",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Da",
+    message: "Nossa vida."
   },
   {
     driveId: "1J7wc01_r-PqHB3wNZ0GmNXcXpnyd778R",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Minha",
+    message: "Melhor companheira."
   },
   {
     driveId: "1GanPFB81HJj9UdusDm-aTed-SAA7p8dR",
-    title: "Titulo",
-    message: "blablablable"
+    title: "Existência",
+    message: "Que colocamos juntos no mundo e que sou grato de ter tido a sorte de ter sido com você, te amo!",
+    textColor: "gray.800"
   },
 ]
 
@@ -126,9 +123,9 @@ const Home: NextPage = () => {
                 <Image src={`https://drive.google.com/u/0/uc?id=${image.driveId}&export=download`} alt='one' w="80%" h="80%" />
               </Box>
               <Flex position="absolute" w="100%" h="100%" direction="column" justify="flex-end" align="center">
-                <Box textAlign="left">
-                  <Text fontWeight="bold" fontSize="2xl">{image.title}</Text>
-                  <Text>{image.message}</Text>
+                <Box textAlign="left" ml={["2","4"]}>
+                  <Text color={image.textColor ?? "white"} fontWeight="bold" fontSize="2xl">{image.title}</Text>
+                  <Text color={image.textColor ?? "white"}>{image.message}</Text>
                 </Box>
               </Flex>
             </SwiperSlide>
