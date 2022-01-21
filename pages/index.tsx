@@ -90,7 +90,6 @@ const Home: NextPage = () => {
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
-          initialSlide={1}
           slidesPerView={'auto'}
           coverflowEffect={{
             "rotate":
